@@ -15,13 +15,13 @@ public class BotConfig {
     @Value("6618489022:AAEt7Pt70VeolCaeVee0bUSlr61qVXn-SGU")
     private String token;
 
-    @Value("Добро пожаловать! Я ваш бот для напоминаний, для создания напоминания отправьте мне сообщение вида: дд.мм.гггг чч:мм Текст напоминания")
+    @Value("${telegram.bot.msg.start}")
     private String startMsg;
 
-    @Value("Не верный формат сообщения, попробуйте ещё раз")
+    @Value("${telegram.bot.msg.error}")
     private String errorMsg;
 
-    @Value("Напоминание успешно создано!")
+    @Value("${telegram.bot.msg.success}")
     private String successMsg;
 
     @Bean

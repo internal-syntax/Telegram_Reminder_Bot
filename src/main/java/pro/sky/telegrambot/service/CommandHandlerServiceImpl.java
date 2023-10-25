@@ -25,16 +25,6 @@ public class CommandHandlerServiceImpl implements CommandHandlerService {
         }
     }
 
-/*    @Override
-    public String handleCommand(Long chatId, String command) {
-        switch (command) {
-            case START_COMMAND:
-                return config.getStartMsg();
-            default:
-                return handleCreateTaskCommand(chatId, command);
-        }
-    }*/
-
     private String handleCreateTaskCommand(Long chatId, String command) {
         try {
             Notification notification = MessageUtil.parseCreateCommand(chatId, command);
